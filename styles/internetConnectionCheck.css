@@ -1,0 +1,102 @@
+body {
+  background-color: #f2f2f2;
+}
+
+.wrapper {
+  top: 20px;
+  left: 20px;
+  animation: hide-toast 1s ease forwards;
+
+
+}
+
+@keyframes hide-toast {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  40% {
+    transform: translateX(20px);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+
+}
+
+.wrapper.hide {
+  animation: hiding 1s ease forwards;
+
+}
+
+@keyframes hiding {
+  0% {
+    transform: translateX(20px);
+
+  }
+
+  40% {
+    transform: translateX(10%);
+  }
+
+  80%,
+  100% {
+    transform: translateX(-100%);
+  }
+
+}
+
+.wrapper.toast {
+  display: flex;
+  background-color: #f2f2f2;
+  width: 400px;
+  padding: 20px 10px 20px 20px;
+  border-left: green solid 10px;
+
+}
+
+.toast.content {
+  display: flex;
+  color: #f2f2f2;
+}
+
+.content.icon {
+  height: 50px;
+  width: 50px;
+  font-size: 25px;
+  line-height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: green;
+}
+
+.content.details {
+  margin-left: 20px;
+}
+
+.details span {
+  font-size: 20px;
+}
+
+.details p {
+  color: antiquewhite;
+}
+
+.toast.close-icon {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  line-height: 30px;
+  font-size: 20px;
+  background-color: aqua;
+  cursor: pointer;
+}
+
+.toast.offline {
+  background-color: rgb(115, 115, 181);
+}
+
+.toast.offline .content .icon {
+  background-color: rgb(177, 78, 95);
+}
